@@ -28,6 +28,7 @@ export default class PokemonDisplay extends React.Component{
 		let response = await fetch("https://pokeapi.co/api/v2/pokemon/" + getRandomPokemonId()).catch(error => {
 			throw new Error("API failure.");
 		});
+		console.log("Fetch has finished.");
 
 		if (response.status === 404){
 			throw new Error("API did not have data for the requested ID.");
